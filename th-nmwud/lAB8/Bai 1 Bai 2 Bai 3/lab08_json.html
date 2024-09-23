@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            border: 1px solid #000;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .user-info {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .user-info p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .user-info span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Information</h1>
+        <div id="user-info" class="user-info"></div>
+    </div>
+
+    <script>
+        // JSON object with user information
+        const user = {
+            "name": "Nguyễn Văn A",
+            "age": 30,
+            "email": "nguyenvana@stu.edu.vn",
+            "address": "Ho Chi Minh, NY 10001"
+        };
+
+        // Function to display user information
+        function displayUserInfo(user) {
+            const userInfoDiv = document.getElementById('user-info');
+            userInfoDiv.innerHTML = `
+                <p><span>Name:</span> ${user.name}</p>
+                <p><span>Age:</span> ${user.age}</p>
+                <p><span>Email:</span> ${user.email}</p>
+                <p><span>Address:</span> ${user.address}</p>
+            `;
+        }
+
+        // Call the function to display user information
+        displayUserInfo(user);
+    </script>
+</body>
+</html>
